@@ -3,8 +3,55 @@
 }
 
 html, body{
-	height:  100%;
+	min-height: 100%;
 	width:  100%;
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 100%;
+ }
+
+.wrapper{
+		background: yellow;
+		height: 100%;
+		width: 80%;
+		margin: auto; /*der Abstand vom Bodyrand, Farbfläche mittig*/
+ }
+
+.card{
+		border: 1px black dotted; /*gepunkteter Rahmen um jede Karte, so breit wie der wrapper*/
+    position: relative;
+ }
+
+.card img{  /*bedeutet, alle Bilder die in einer Karte sind*/
+	width: 100%;   /*Bild sei so breit wie der Kasten in dem du drin bist*/
+	display: block;
+ }
+
+ .card h1{
+ 	position: absolute;
+	background: #fff;
+	padding: 5px;
+	border: 5px solid #3f888f; /*3 Werte sind in border zu definieren: Format, Style (umlaufend), Farbe, kann man auch in 3 Zeilen getrennt voneinander schreiben*/
+	outline: 2px solid #ff1493;
+
+	top: 50%; 		/*top, left und transform positionieren die Überschrift auf dem Bild, alternativ dazu geht auch bei card: display: flex; Justify-content: center; algin-items: center;*/
+	left: 50%;
+	transform: translate(-50px, -50px);
+ }
+
+
+
+@media (min-width: 1024px){
+
+	body{
+		background: red;
+ }
+
+.row{
+	display: flex; /*carts nebeneiander bei großem Bildschirm, untereinander bei kleinem Bildschirm*/
+ }
+
+ .card{
+ 	margin: 5px; /*umlaufend Abstand um den Card-Rahmen herum*/
+ }
+
 }
